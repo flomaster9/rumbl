@@ -1,0 +1,6 @@
+ul.list
+  = for user <- @users do
+    li.list__item
+      span.list__attribute = user.id
+      span.list__attribute = user.login
+      = link "View", to: user_path(@conn, :show, user.id), class: "list__attribute"
