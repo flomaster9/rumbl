@@ -1,0 +1,17 @@
+.header
+  .container
+    .header__row
+      span.header__logo logo
+      nav
+        ul.nav
+          li.nav__item
+            a.nav__link href=page_path(@conn,:index) home
+          li.nav__item
+            a.nav__link href=user_path(@conn,:index) users
+      .header__profile
+        .header__profile-bar
+          i.header__profile-icon
+          span Login
+        / .header__profile-social
+        /   i.header__profile-vk
+        /   i.header__profile-instagram

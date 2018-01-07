@@ -1,0 +1,39 @@
+.nav {
+  display: flex;
+  margin-left: 30px;
+
+  &__item {
+    padding: 10px 0 15px;
+    transition: background-color 0.3s;
+    background-color: transparent;
+    cursor: pointer;
+
+    &:hover {
+      background-color: $gracier;
+      border-color: transparent;
+
+      .nav__link {
+        color: $hamming-bird;
+      }
+    }
+
+    &:first-child {
+      .nav__link {
+        border-left: none;
+      }
+    }
+  }
+
+  &__link {
+    color: $dark-text;
+    display: inline-flex;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 5px 30px;
+
+    &:nth-child(1) {
+      border-left: 1px solid rgba($gray-text, 0.3);
+    }
+  }
+}

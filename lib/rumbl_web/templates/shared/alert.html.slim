@@ -1,0 +1,6 @@
+.alert__content
+  .container
+    p.alert
+      = get_flash(@conn, :info)
+    p.alert
+      = get_flash(@conn, :error)

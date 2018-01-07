@@ -1,12 +1,13 @@
-.headline
-  h2.title Profile
+.container
+  .headline
+    h2.headline__title Profile
 
-.profile__attributes
-  ul.list
-    li.list__item
-      span.list__attribute.profile__attribute Login
-      span.list__attribute.profile__attribute-content = @user.login
-    li.list__item
-      span.list__attribute.profile__attribute Email
-      span.list__attribute.profile__attribute-content = @user.email
+  .profile__attributes
+    ul.list
+      li.list__item
+        span.list__attribute.profile__attribute Login
+        span.list__attribute.profile__attribute-content = @user.login
+      li.list__item
+        span.list__attribute.profile__attribute Email
+        span.list__attribute.profile__attribute-content = @user.email
 

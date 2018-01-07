@@ -1,0 +1,47 @@
+.intro {
+  position: relative;
+
+  &__image {
+    height: 150px;
+    width: 100%;
+    transition: all 2s;
+
+    &:hover {
+      transform: scale(2);
+    }
+  }
+
+  &__darken {
+    z-index: 1;
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(#000, 0.6);
+  }
+
+  &__image {
+    display: block;
+    background-image: url("/images/intro.jpg");
+    background-attachment: fixed;
+    background-position: center 650px;
+    padding: 70px 0;
+    filter: blur(1px);
+    position: relative;
+  }
+
+  &__content {
+    position: absolute;
+    top: 32%;
+    width: 100%;
+    z-index: 2;
+  }
+
+  &__text {
+    color: #fff;
+    text-align: center;
+    font-size: 100px;
+  }
+}

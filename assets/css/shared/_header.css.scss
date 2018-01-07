@@ -1,0 +1,14 @@
+.header {
+  margin-top: 40px;
+  display: flex;
+
+  &__row {
+    display: flex;
+    align-items: baseline;
+    padding: 0 10px;
+  }
+
+  &__profile {
+    margin-left: auto;
+  }
+}
