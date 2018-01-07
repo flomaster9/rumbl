@@ -1,0 +1,18 @@
+.container
+  .headline
+    h2.headline__title New User
+  = form_for @changeset, user_path(@conn, :create), [class: 'form card'], fn f ->
+    .form-group
+      = text_input f, :login, placeholder: "login", class: "form-control"
+      p.form-error
+        = error_tag f, :login
+    .form-group
+      = text_input f, :email, placeholder: "email", class: "form-control"
+      p.form-error
+        = error_tag f, :email
+    .form-group
+      = password_input f, :password, placeholder: "Password", class: "form-control"
+      p.form-error
+        = error_tag f, :password
+    .form-group
+      = submit "create", class: "form-btn form-btn--left"

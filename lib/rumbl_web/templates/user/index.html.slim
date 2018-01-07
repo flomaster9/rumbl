@@ -1,9 +1,9 @@
 .container
   .headline
     h2.headline__title Users
-  ul.list
+  ul.list.list--lg.card
     = for user <- @users do
       li.list__item
-        span.list__attribute = user.id
         span.list__attribute = user.login
+        span.list__attribute = user.email
         = link "View", to: user_path(@conn, :show, user.id), class: "list__attribute"
