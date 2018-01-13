@@ -1,6 +1,6 @@
 .container
   .headline
-    h2.headline__title New User
+    h2.headline__title Registration
   = form_for @changeset, user_path(@conn, :create), [class: 'form card'], fn f ->
     .form-group
       = text_input f, :login, placeholder: "login", class: "form-control"

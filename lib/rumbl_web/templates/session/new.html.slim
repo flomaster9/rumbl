@@ -1,0 +1,10 @@
+.container
+  .headline
+    h2.headline__title Login
+  = form_for @conn, session_path(@conn, :create), [as: :session, class: 'form card'], fn f ->
+    .form-group
+      = text_input f, :login, placeholder: "login", class: "form-control"
+    .form-group
+      = password_input f, :password, placeholder: "Password", class: "form-control"
+    .form-group
+      = submit "create", class: "form-btn form-btn--left"

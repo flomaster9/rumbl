@@ -10,8 +10,13 @@
             a.nav__link href=user_path(@conn,:index) users
       .header__profile
         .header__profile-bar
-          i.header__profile-icon
-          span Login
+          = if @current_user do
+            i.header__profile-icon
+            span = @current_user.login
+            = link " / Logout", to: session_path(@conn, :delete, @current_user), method: "delete"
+          - else
+            = link "Register / ", to: user_path(@conn, :new)
+            = link "Login", to: session_path(@conn, :new)
         / .header__profile-social
         /   i.header__profile-vk
         /   i.header__profile-instagram
