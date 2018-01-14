@@ -1,0 +1,12 @@
+.container
+  .headline
+    h2.headline__title Videos
+  = link "create new video", to: video_path(@conn, :new)
+  ul.list.list--lg.card
+    = for video <- @videos do
+      li.list__item
+        span.list__attribute = video.title
+        span.list__attribute = video.description
+        span.list__attribute = video.url
+        = link "View", to: video_path(@conn, :show, video.id), class: "list__attribute"
+

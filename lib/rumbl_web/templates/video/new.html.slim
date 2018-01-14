@@ -1,0 +1,16 @@
+.container
+  .headline
+    h2.headline__title Create video
+  = form_for @changeset, video_path(@conn, :create), [class: 'form card'], fn f ->
+    .form-group
+      = text_input f, :title, placeholder: "title", class: "form-control"
+      p.form-error
+        = error_tag f, :title
+    .form-group
+      = text_input f, :description, placeholder: "description", class: "form-control"
+      p.form-error
+        = error_tag f, :description
+    .form-group
+      = text_input f, :url, placeholder: "url", class: "form-control"
+    .form-group
+      = submit "create", class: "form-btn form-btn--left"

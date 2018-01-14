@@ -1,0 +1,22 @@
+.container
+  .headline
+    h2.headline__title
+      = @video.title
+
+  .profile__attributes
+    ul.list.list--md.card
+      li.list__item
+        span.list__attribute.profile__attribute Video id:
+        span.list__attribute.profile__attribute-content = @video.id
+      li.list__item
+        span.list__attribute.profile__attribute Video title:
+        span.list__attribute.profile__attribute-content = @video.title
+      li.list__item
+        span.list__attribute.profile__attribute Description:
+        span.list__attribute.profile__attribute-content = @video.description
+      li.list__item
+        span.list__attribute.profile__attribute Url:
+        span.list__attribute.profile__attribute-content = @video.url
+      li.list__item
+        = link "delete", to: video_path(@conn, :delete, @video.id), method: "delete"
+
